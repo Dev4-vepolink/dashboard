@@ -1,0 +1,48 @@
+.aside
+    position: fixed
+    left: 0
+    top: 0
+    bottom: 0
+    background: var(--white)
+    z-index: 2
+    max-width: 270px
+    width: 100%
+    box-shadow: 0 0 8px rgb(0 0 0 / 6%)
+    padding-top: 70px
+    @include mediaMax(1100px)
+        max-width: 240px
+    @include mediaMax(991px)
+        position: fixed
+        left: -240px
+        top: 0
+        bottom: 0
+        transition: .5s ease
+    &.open
+        left: 0
+
+    .wrap
+        height: 100%
+        padding: 15px 0
+    .navAside
+        ul
+            li
+                display: block
+                a
+                    display: flex
+                    gap: 0 12px
+                    align-items: center
+                    padding: 13px 25px
+                    margin: 5px 0
+                    color: var(--text)
+                    font-weight: 500
+                    box-shadow: -2px 0 8px rgba(0, 0, 0, 0)
+                    transition: .5s ease
+                    img
+                        width: auto
+                        height: 20px
+                        filter: brightness(0) opacity(0.5)
+                        transition: .5s ease
+                    &:hover,&.active
+                        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.06)
+                        img
+                            filter: brightness(1) opacity(1)
